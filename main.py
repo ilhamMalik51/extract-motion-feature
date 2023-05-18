@@ -61,8 +61,9 @@ if __name__=="__main__":
 
         if opt.latency:
             start_time = time.time()
-        elif video_name in db.keys():
-            # features is already extracted
+        
+        if video_name in db.keys():
+            # if the features is already extracted
             continue
         
         video_path = os.path.join(opt.video_root, video_name)
